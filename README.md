@@ -4,12 +4,15 @@ Simple HTML / Javascript webpage that shows current bitrate of desired RTMP serv
 
 ## Configure the file.
 The following line configures your RTMP server location;
+
 Line 33: `const response = await fetch("http://localhost/stat");`
 
 Example below is for the stream /live (publish/live) if you have changed this make sure to change it accordingly;
+
 Line 36: `const live = parse.getElementsByTagName("live")[0];`
 
 The following line configures how often you want the bitrate to update, depending on how often the RTMP updates your /stat page;
+
 Line 48: `setInterval(getBitrate, 2000);`
 
 
