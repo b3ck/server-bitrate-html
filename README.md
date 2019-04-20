@@ -19,7 +19,7 @@ The following line configures how often you want the bitrate to update, dependin
 
 
 
-After everything is configured correctly just add the `bitrate.html` as a browser source in OBS.
+After everything is configured correctly save it and add the `bitrate.html` as a browser source in OBS.
 
 Enjoy!
 -b3ck
