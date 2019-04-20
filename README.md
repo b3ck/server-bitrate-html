@@ -1,8 +1,8 @@
 # rtmp-bitrate-html
 Simple HTML / Javascript webpage that shows current bitrate of desired RTMP server.
 
-
-## Configure the file.
+---
+## Configure the file:
 ---
 The following line configures your RTMP server location;
 
