@@ -1,2 +1,13 @@
 # rtmp-bitrate-html
 Simple HTML / Javascript webpage that shows current bitrate of desired RTMP server.
+
+
+# Match the name of your stream.
+Example below is for the stream /live (publish/live) if you have changed this make sure to change it accordingly.
+
+Line 37: `const live = parse.getElementsByTagName("live")[0];`
+
+After everything is configured correctly just add the `bitrate.html` as a browser source in OBS.
+
+Enjoy!
+-b3ck
