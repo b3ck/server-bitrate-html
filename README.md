@@ -7,7 +7,7 @@ The following line configures your RTMP server location;
 
 Line 33: `const response = await fetch("http://localhost/stat");`
 
-Example below is for the stream /live (publish/live) if you have changed this make sure to change it accordingly;
+The example below is for the stream /live (publish/live) if you have changed this make sure to change it accordingly;
 
 Line 36: `const live = parse.getElementsByTagName("live")[0];`
 
