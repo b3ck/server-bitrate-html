@@ -1,5 +1,5 @@
 # rtmp-bitrate-html
-Simple HTML / Javascript webpage that shows current bitrate of desired RTMP server.
+##### Simple HTML / Javascript webpage that shows current bitrate of desired NGINX/NMS RTMP & DOCKER-SLS-SRT servers. (more coming soon)
 
 ### - If you're using NGINX you'll find the needed files in the [/nginx/](https://github.com/b3ck/rtmp-bitrate-html/tree/master/nginx) directory.
 
