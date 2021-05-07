@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+	<meta charset="UTF-8">
+	<title>NMS RTMP FETCH BITRATE</title>
+
+<style>
+
+body {
+	text-align: left;
+	background-color: rgba(0, 0, 0, 0);
+	margin: 0px auto;
+	font-family: 'Open Sans', sans-serif;
+	overflow: hidden;
+	color: #1e90ff;
+	font-size: 36px;
+	font-weight: 700;
+}
+
+h1 {
+	text-align: left;
+}
+
+.shadow {
+  padding: 10px;
+  -webkit-filter: drop-shadow( 0px 0px 9px rgba(0, 0, 0, .7));
+  filter: drop-shadow( 0px 0px 9px rgba(0, 0, 0, .7));
+  /* Similar syntax to box-shadow */
+}
+
+
+#bitrate::after {
+	content:" kb/s \a";
+	white-space: pre;
+}
+
+</style>
+
+</head>
+
+<body>
+<div class="shadow">
+    <h1 id="bitrate" align="left"></h1>
+</div>
+<script>
+  const getBitrate = async () => {
+    const response = await fetch("http://localhost/api/streams/live/cam1");
+    const data = await response.json();
+   
+    if (data.bitrate) {
+      document.getElementById("bitrate").innerHTML = data.bitrate;
+    } else {
+      document.getElementById("bitrate").innerHTML = "0";
+    }
+  };
+
+  getBitrate();
+  setInterval(getBitrate, 2000);
+</script>
+  </body>
+</html>
