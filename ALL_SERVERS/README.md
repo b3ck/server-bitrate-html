@@ -46,7 +46,7 @@ document.getElementById('bitrate').innerHTML = "blah blah " + bitrate + " kb/s";
 # Configure the way the script fetches the bitrate:
 
 ## Line 115; 
-The following line configures the interval the script fetches all of the bitrates from the server stats pages in the array, this is in milleseconds, so 2000 would equal 2 seconds.
+The following line configures the interval the script fetches all of the bitrates from the server stats pages in the array, this is in milliseconds, so 2000 would equal 2 seconds.
 ```javascript
     let interval = 2000;
 ```
