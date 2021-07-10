@@ -104,27 +104,10 @@
 
     const setText = (bitrate) => {
       if (!bitrate) {
-        // this will show nothing if the bitrate is 0.
         document.getElementById('bitrate').innerHTML = null;
-        // you can also do this:
-        // document.getElementById('bitrate').innerHTML = "0";
-        //
-        // or this:
-        // document.getElementById('bitrate').innerHTML = "NO SIGNAL";
-        //
-        // or whatever you want:
-        // document.getElementById('bitrate').innerHTML = "DISCONNECTED";
-        //
-        // you get the idea..
         return;
       }
-      // this will show the bitrate and kb/s after it when there is bitrate.
       document.getElementById('bitrate').innerHTML = bitrate + " kb/s";
-      // you can also do this:
-      // document.getElementById('bitrate').innerHTML = "bitrate: " + bitrate + " kb/s";
-      //
-      // or whatever:
-      // document.getElementById('bitrate').innerHTML = "blah blah " + bitrate + " kb/s";
     }
   </script>
 
