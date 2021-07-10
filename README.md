@@ -5,13 +5,13 @@
 ### try using the combined version in the [/ALL_SERVERS/](https://github.com/b3ck/server-bitrate-html/tree/master/ALL_SERVERS) directory.
 
 ---
-### If you're using NGINX you'll find the needed files in the [/nginx/](https://github.com/b3ck/server-bitrate-html/tree/master/nginx) directory.
+### NGINX ->> [/nginx/](https://github.com/b3ck/server-bitrate-html/tree/master/nginx)
 
 ---
-### If you're using NMS you'll find the needed files in the [/nms/](https://github.com/b3ck/server-bitrate-html/tree/master/nms) directory.
+### Node-Media-Server (NMS) ->> [/nms/](https://github.com/b3ck/server-bitrate-html/tree/master/nms)
 
 ---
-### If you're using SRT you'll find the needed files in the [/srt/](https://github.com/b3ck/server-bitrate-html/tree/master/srt) directory.
+### SRT-Live-Server (SLS) or DOCKER-SLS-SRT ->> [/srt/](https://github.com/b3ck/server-bitrate-html/tree/master/srt)
 
 ---
 
