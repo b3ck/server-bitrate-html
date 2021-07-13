@@ -78,5 +78,9 @@ el.innerHTML = `blah blah ${bitrate} kb/s`;
 
 After everything is configured correctly and edited to your liking, save it and add the `bitrate.html` as a browser source in OBS.
 
-Enjoy!
--b3ck
+---
+### Credits:
+
+b3ck - concept, feedback and testing.
+
+715209 - coding and feedback.
