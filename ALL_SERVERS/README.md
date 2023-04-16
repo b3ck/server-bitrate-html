@@ -12,16 +12,16 @@ const interval = 2000;
 
 
 ## Lines 129-131;
-## Modify the following lines to match your server(s) setup, make your changes accordingly;
+## Modify the following lines to match your server(s) setup, make your changes accordingly, please note you can add in as many servers you want to the server array, example you could have 4 different srt, nms, nginx servers;
 
 Line 129; if you're using SRT this would be your `streamid`, in the example below 'publish/live/feed1', if you do not want to show RTT then change 'rtt: true' to 'rtt: false'
 ```javascript
-{ server: "SRT", page: "http://127.0.0.1:8181/stats", key: "publish/live/test", rtt: true },
+{ server: "SRT", page: "http://127.0.0.1:8181/stats", key: "publish/live/feed1", rtt: true },
 ```
 
-Line 130; if you're using NMS this would be your `application` + `key`, in the example below 'live' is the application and 'feed1' is the key.
+Line 130; if you're using NMS this would be your `application` + `key`, in the example below 'live' is the application and 'feed1' is the key (this also includes the default password to access the NMS server stats page).
 ```javascript
-{ server: "NMS", page: "http://localhost:8000/api/streams/live/feed1" },
+{ server: "NMS", page: "http://admin:admin@localhost:8000/api/streams/live/feed1" },
 ```
 
 Line 131; if you're using NGINX this would be just your `key`, so if you go with the default, it would be 'live'
