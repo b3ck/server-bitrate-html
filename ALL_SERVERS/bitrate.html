@@ -128,7 +128,8 @@
     const stats = [
       { server: "SRT", page: "http://127.0.0.1:8181/stats", key: "publish/live/test", rtt: true },
       { server: "NMS", page: "http://localhost:8000/api/streams/live/feed1" },
-      { server: "NMS", page: "http://username:password@localhost:8000/api/streams/live/feed1" },
+      // Example with username and password in the URL:
+      { server: "NMS", page: "http://admin:admin@localhost:8000/api/streams/live/feed1" },
       { server: "NGINX", page: "http://localhost/stat", key: "live" }
     ];
 
