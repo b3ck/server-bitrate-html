@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ALL-SERVERS-STATS-FETCH</title>
+
+  <style>
+    body {
+      background-color: rgba(0, 0, 0, 0);
+      margin: 0px auto;
+      font-family: 'Nunito SemiBold Italic', cursive;
+      overflow: hidden;
+	 -webkit-text-stroke: 1px black;
+      color: #1fff06;
+      text-shadow:
+         3px 3px 0 #000,
+       -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+         1px 1px 0 #000;
+      font-size: 30px;
+      font-weight: 700;
+      text-align: left;
+      padding: 5px;
+    }
+
+    #bitrate * {
+      vertical-align: middle;
+    }	
+	
+	 div{
+	 max-width:1100px;
+	 height: 50px;
+	 margin: 2px;
+	}
+	 .inl{
+	 display: inline;
+	}
+  </style>
+
+</head>
+
+<body>
+
+  <div id="block_container">
+
+    <div class="inl" id="bitrate"></div>
+	<div class="inl" id="rtt"></div>
+
+  </div>
+
+  <script>
+    const tryFetch = async (page) => {
+      try {
+        return await fetch(page);
+      } catch (error) {
+        console.log(page, error);
+      }
+
+      return null;
+    }
+
+    const getSrtBitrate = async (page, publisher) => {
+      const response = await tryFetch(page);
+      if (!response) return null;
+
+      const srtdata = await response.json();
+      if (srtdata.publishers[publisher] == null) return null;
+
+      const { bitrate, rtt } = srtdata.publishers[publisher];
+      return { bitrate, rtt };
+    };
+
+    const getNmsBitrate = async (page) => {
+      const response = await tryFetch(page);
+      if (!response) return null
+
+      const { bitrate } = await response.json();
+
+      if (!bitrate) return null;
+
+      return { bitrate };
+    };
+
+    const getNginxBitrate = async (page, key) => {
+      const response = await tryFetch(page);
+      if (!response) return null
+
+      const data = await response.text();
+      const parse = new window.DOMParser().parseFromString(data, "text/xml");
+      const live = parse.getElementsByTagName(key)[0];
+
+      const node = live.childNodes[1].childNodes[14];
+
+      if (!node) return null;
+
+      const bitrate = Math.round(node.childNodes[0].nodeValue / 1024);
+      return { bitrate };
+    };
+
+    const run = async (stats, interval) => {
+      setText(await getBitrate(stats))
+
+      setInterval(async () => {
+        setText(await getBitrate(stats));
+      }, interval);
+    }
+
+    const getBitrate = async (stats) => {
+      const get = {
+        "SRT": getSrtBitrate,
+        "NMS": getNmsBitrate,
+        "NGINX": getNginxBitrate,
+      }
+
+      const values = await Promise.all(stats.map(s => get[s.server](s.page, s.key)));
+      const index = values.findIndex(el => el);
+
+      return [values[index], stats[index]];
+    }
+
+    const setText = (stats) => {
+      [stats, origin] = stats;
+      const { bitrate, rtt } = stats || {};
+      const el = document.getElementById('bitrate');
+      const elrtt = document.getElementById('rtt');
+
+      if (!bitrate) {
+        el.innerHTML = `❤️ Support me at Ko-fi.com/USER &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; kein Netz`;
+        elrtt.innerHTML = null;
+        return;
+      }
+
+ 
+      el.innerHTML = `❤️ Support me at Ko-fi.com/USER &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${bitrate} kb/s`;
+
+      if (origin.rtt)
+        elrtt.innerHTML = `• ${Math.round(rtt)} RTT`;
+    }
+  </script>
+
+  <script>
+    const interval = 500;
+    const stats = [
+      //{ server: "NMS", page: "http://localhost:8000/api/streams/live/feed1" },
+      //{ server: "NGINX", page: "http://localhost/stat", key: "live" },
+	  //{ server: "SRT", page: "http://eu.srt.belabox.net:8080/PASSWORT_VON_BELABOX", key: "PASSWORT_VON_BELABOX", rtt: true },
+	  // server: "SRT", page: "http://SRT-SERVER-IP:8111/stats", key: "live/stream/Stream-Key", rtt: true }
+    ];
+
+    run(stats, interval);
+  </script>
+
+</body>
+
+</html>
