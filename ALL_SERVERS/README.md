@@ -86,6 +86,8 @@ Make sure to add it as a local file:
 ---
 ### Credits:
 
+changes from Akinos01
+
 b3ck - concept, feedback and testing.
 
 715209 - coding and feedback.
