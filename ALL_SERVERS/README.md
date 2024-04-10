@@ -1,4 +1,4 @@
-# How to edit and use `bitate.html`:
+# How to edit and use `bitrate.html`:
 Open up the `bitrate.html` in your favorite code editor, once open follow the instructions below.
 
 ---
