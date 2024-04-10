@@ -4,14 +4,14 @@ Open up the `bitrate.html` in your favorite code editor, once open follow the in
 ---
 # Configure the way the script fetches the bitrate:
 
-## Line 127; 
+## Line 127 or 144; 
 The following line configures the interval the script fetches all of the bitrates from the server stats pages in the array, this is in milliseconds, so 2000 would equal 2 seconds.
 ```javascript
 const interval = 2000;
 ```
 
 
-## Lines 129-131;
+## Lines 129-131 or 146-149;
 ## Modify the following lines to match your server(s) setup, make your changes accordingly, please note you can add in as many servers you want to the server array, example you could have 4 different srt, nms, nginx servers;
 
 Line 129; if you're using SRT this would be your `streamid`, in the example below 'publish/live/feed1', if you do not want to show RTT then change 'rtt: true' to 'rtt: false'
@@ -32,9 +32,9 @@ Line 131; if you're using NGINX this would be just your `key`, so if you go with
 
 # Configure the way it looks:
 
-## Modify line 114 to change how it looks when there is NO incoming bitrate:
+## Modify line 114 or 130 to change how it looks when there is NO incoming bitrate:
 
-Default for line 114 will show nothing.
+Default for line 114 or 130 will show nothing.
 ```javascript
 el.innerHTML = null;
 ```
@@ -55,9 +55,9 @@ Example #3; this will show: `WHATEVER`
 el.innerHTML = `WHATEVER`;
 ```
 ---
-## Modify line 119 to change how it looks when there IS incoming bitrate:
+## Modify line 119 or 136 to change how it looks when there IS incoming bitrate:
 
-Default for line 119 will show: `XXXX kb/s`.
+Default for line 119 or 136 will show: `XXXX kb/s`.
 ```javascript
 el.innerHTML = `${bitrate} kb/s`;
 ```
