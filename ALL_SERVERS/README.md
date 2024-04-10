@@ -1,5 +1,5 @@
 # How to edit and use `bitrate.html`:
-Open up the `bitrate.html` in your favorite code editor, once open follow the instructions below.
+Open up the `bitrate.html` or `bitrate-nebeneinander.html` in your favorite code editor, once open follow the instructions below.
 
 ---
 # Configure the way the script fetches the bitrate:
