@@ -5,4 +5,4 @@
 
 ---
 
-### Find me on Discord if you need any help: Akinos01
+### Find me on Discord if you need any help: Akinos01 https://discord.gg/7AQRAQAp4C
