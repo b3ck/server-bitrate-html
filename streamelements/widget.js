@@ -1,5 +1,7 @@
 let interval = 2000;
 let stats = [];
+let showKbpsText = true;
+let showRttText = true;
 
 window.addEventListener('onWidgetLoad', function(obj) {
   const fieldData = obj.detail.fieldData;
@@ -11,19 +13,27 @@ window.addEventListener('onWidgetLoad', function(obj) {
     { server: fieldData.serverType4, page: fieldData.statsURL4, key: fieldData.key4, rtt: fieldData.rtt4 === "yes" }
   ];
 
+  // Read the new fields
+  showKbpsText = fieldData.showKbpsText === "yes";
+  showRttText = fieldData.showRttText === "yes";
+
   // Apply custom styles
-  const customCSS = `
-    body {
-      font-family: '${fieldData.fontName}', sans-serif;
-      color: ${fieldData.fontColor};
-      font-size: ${fieldData.fontSize}px;
-      font-weight: ${fieldData.fontWeight};
-      text-align: ${fieldData.textAlign};
-      text-shadow: ${fieldData.textShadow};
-      padding: ${fieldData.textPadding}px;
-    }
-  `;
-  document.getElementById('custom-css').innerHTML = customCSS;
+  //const customCSS = `
+  //  body {
+  //    font-family: '${fieldData.fontName}', sans-serif;
+  //    color: ${fieldData.fontColor};
+  //    font-size: ${fieldData.fontSize}px;
+  //    font-weight: ${fieldData.fontWeight};
+  //    text-align: ${fieldData.textAlign};
+  //    text-shadow: ${fieldData.textShadow};
+  //    padding: ${fieldData.textPadding}px;
+  //  }
+  //  .font-effect-${fieldData.fontEffect} {
+  //    font-family: '${fieldData.fontName}', sans-serif;
+  //    text-shadow: ${fieldData.textShadow};
+  //  }
+  //`;
+  //document.getElementById('custom-css').innerHTML = customCSS;
 
   run(stats, interval);
 });
@@ -106,10 +116,18 @@ const setText = (stats) => {
     return;
   }
 
+  let bitrateText = `${bitrate}`;
+  if (showKbpsText) {
+    bitrateText += " kb/s";
+  }
+
   if (origin.rtt && rtt !== undefined) {
-    el.innerHTML = `${bitrate} kb/s • ${Math.round(rtt)} RTT`;
+    let rttText = `• ${Math.round(rtt)}`;
+    if (showRttText) {
+      rttText += " RTT";
+    }
+    el.innerHTML = `${bitrateText} ${rttText}`;
   } else {
-    el.innerHTML = `${bitrate} kb/s`;
+    el.innerHTML = `${bitrateText}`;
   }
 }
-
