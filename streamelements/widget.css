@@ -1,16 +1,23 @@
 body {
-  background-color: rgba(0, 0, 0, 0);
-  margin: 0px auto;
-  font-family: '{{fontName}}', sans-serif;
-  overflow: hidden;
-  color: {{fontColor}};
-  font-size: {{fontSize}}px;
-  font-weight: {{fontWeight}};
-  text-align: {{textAlign}};
-  text-shadow: {{textShadow}};
-  padding: {{textPadding}}px;
+  background-color: rgba(0, 0, 0, 0) !important;
+  margin: 0px auto !important;
+  font-family: '{{fontName}}' !important;
+  overflow: hidden !important;
+  color: {{fontColor}} !important;
+  font-size: {{fontSize}}px !important;
+  font-weight: {{fontWeight}} !important;
+  text-align: {{textAlign}} !important;
+  text-shadow: {{textShadow}} !important;
+  padding-top: 0px !important;
+  padding-left: {{textPadding}}px !important;
+  padding-right: {{textPadding}}px !important;
+  padding-bottom: {{textPadding}}px !important;
+}
+
+#bitrate, #rtt {
+  color: {{fontColor}} !important;
 }
 
 #bitrate * {
-  vertical-align: middle;
+  vertical-align: middle !important;
 }
