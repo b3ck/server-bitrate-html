@@ -60,10 +60,66 @@
     "step": 1,
     "group": "Style"
   },
+  "fontEffect": {
+    "label": "Font Effect",
+    "type": "dropdown",
+    "value": "none",
+    "options": {
+      "none": "None",
+      "anaglyph": "Anaglyph",
+      "brick-sign": "Brick Sign",
+      "canvas-print": "Canvas Print",
+      "crackle": "Crackle",
+      "decaying": "Decaying",
+      "destruction": "Destruction",
+      "distressed": "Distressed",
+      "distressed-wood": "Distressed Wood",
+      "emboss": "Emboss",
+      "fire": "Fire",
+      "fire-animation": "Fire Animation",
+      "fragile": "Fragile",
+      "grass": "Grass",
+      "ice": "Ice",
+      "mitosis": "Mitosis",
+      "neon": "Neon",
+      "outline": "Outline",
+      "putting-green": "Putting Green",
+      "scuffed-steel": "Scuffed Steel",
+      "shadow-multiple": "Shadow Multiple",
+      "splintered": "Splintered",
+      "static": "Static",
+      "stonewash": "Stonewash",
+      "3d": "Three Dimensional",
+      "3d-float": "Three Dimensional Float",
+      "vintage": "Vintage",
+      "wallpaper": "Wallpaper"
+    },
+    "group": "Style"
+  },
   "interval": {
     "type": "number",
     "label": "Update interval (ms)",
     "value": 2000,
+    "group": "Settings"
+  },
+  "showKbpsText": {
+    "type": "dropdown",
+    "label": "Show kb/s text",
+    "value": "Yes",
+    "options": {
+      "yes": "Yes",
+      "no": "No"
+    },
+    "group": "Settings"
+  },
+  "showRttText": {
+    "type": "dropdown",
+    "label": "Show RTT text",
+    "value": "Yes",
+    "options": {
+      "yes": "Yes",
+      "no": "No"
+    },
     "group": "Settings"
   },
   "serverType1": {
