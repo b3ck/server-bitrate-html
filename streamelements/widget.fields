@@ -1,0 +1,201 @@
+{
+  "fontName": {
+    "type": "googleFont",
+    "label": "Font name",
+    "value": "Montserrat",
+    "group": "Style"
+  },
+  "fontSize": {
+    "type": "slider",
+    "label": "Font Size:",
+    "value": 22,
+    "min": 0,
+    "max": 255,
+    "step": 1,
+    "group": "Style"
+  },
+  "fontWeight": {
+    "label": "Font Weight",
+    "type": "dropdown",
+    "value": "700",
+    "options": {
+      "100": "Thin (100)",
+      "300": "Light (300)",
+      "400": "Regular (400)",
+      "500": "Medium (500)",
+      "700": "Bold (700)",
+      "900": "Black (900)"
+    },
+    "group": "Style"
+  },
+  "fontColor": {
+    "type": "colorpicker",
+    "label": "Font Color",
+    "value": "rgba(30,144,255,1)",
+    "group": "Style"
+  },
+  "textShadow": {
+    "type": "text",
+    "label": "Text Shadow",
+    "value": "0px 0px 5px rgba(0,0,0,1)",
+    "group": "Style"
+  },
+  "textAlign": {
+    "label": "Text Alignment",
+    "type": "dropdown",
+    "value": "right",
+    "options": {
+      "left": "Left",
+      "center": "Center",
+      "right": "Right"
+    },
+    "group": "Style"
+  },
+  "textPadding": {
+    "type": "slider",
+    "label": "Padding:",
+    "value": 5,
+    "min": 0,
+    "max": 255,
+    "step": 1,
+    "group": "Style"
+  },
+  "interval": {
+    "type": "number",
+    "label": "Update interval (ms)",
+    "value": 2000,
+    "group": "Settings"
+  },
+  "serverType1": {
+    "type": "dropdown",
+    "label": "Server Type 1",
+    "value": "SRT",
+    "options": {
+      "SRT": "SRT",
+      "NMS": "NMS",
+      "NGINX": "NGINX"
+    },
+    "group":"Server 1"
+  },
+  "statsURL1": {
+    "type": "text",
+    "label": "Stats URL 1",
+    "value": "",
+    "group":"Server 1"
+  },
+  "key1": {
+    "type": "text",
+    "label": "Key 1",
+    "value": "",
+    "group":"Server 1"
+  },
+  "rtt1": {
+    "type": "dropdown",
+    "label": "RTT 1",
+    "value": "no",
+    "options": {
+      "yes": "Yes",
+      "no": "No"
+    },
+    "group":"Server 1"
+  },
+  "serverType2": {
+    "type": "dropdown",
+    "label": "Server Type 2",
+    "value": "SRT",
+    "options": {
+      "SRT": "SRT",
+      "NMS": "NMS",
+      "NGINX": "NGINX"
+    },
+    "group":"Server 2"
+  },
+  "statsURL2": {
+    "type": "text",
+    "label": "Stats URL 2",
+    "value": "",
+    "group":"Server 2"
+  },
+  "key2": {
+    "type": "text",
+    "label": "Key 2",
+    "value": "",
+    "group":"Server 2"
+  },
+  "rtt2": {
+    "type": "dropdown",
+    "label": "RTT 2",
+    "value": "no",
+    "options": {
+      "yes": "Yes",
+      "no": "No"
+    },
+    "group":"Server 2"
+  },
+  "serverType3": {
+    "type": "dropdown",
+    "label": "Server Type 3",
+    "value": "SRT",
+    "options": {
+      "SRT": "SRT",
+      "NMS": "NMS",
+      "NGINX": "NGINX"
+    },
+    "group":"Server 3"
+  },
+  "statsURL3": {
+    "type": "text",
+    "label": "Stats URL 3",
+    "value": "",
+    "group":"Server 3"
+  },
+  "key3": {
+    "type": "text",
+    "label": "Key 3",
+    "value": "",
+    "group":"Server 3"
+  },
+  "rtt3": {
+    "type": "dropdown",
+    "label": "RTT 3",
+    "value": "no",
+    "options": {
+      "yes": "Yes",
+      "no": "No"
+    },
+    "group":"Server 3"
+  },
+  "serverType4": {
+    "type": "dropdown",
+    "label": "Server Type 4",
+    "value": "SRT",
+    "options": {
+      "SRT": "SRT",
+      "NMS": "NMS",
+      "NGINX": "NGINX"
+    },
+    "group":"Server 4"
+  },
+  "statsURL4": {
+    "type": "text",
+    "label": "Stats URL 4",
+    "value": "",
+    "group":"Server 4"
+  },
+  "key4": {
+    "type": "text",
+    "label": "Key 4",
+    "value": "",
+    "group":"Server 4"
+  },
+  "rtt4": {
+    "type": "dropdown",
+    "label": "RTT 4",
+    "value": "no",
+    "options": {
+      "yes": "Yes",
+      "no": "No"
+    },
+    "group":"Server 4"
+  }
+}
