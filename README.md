@@ -9,4 +9,4 @@ I've added two different variations of this:
 - [python script](https://github.com/b3ck/server-bitrate-html/tree/master/python) to be used inside of OBS Studio.
 ---
 
-### Find me on Discord if you need any help: b3ck#3517
+### Find me on Discord if you need any help: @b3ck
