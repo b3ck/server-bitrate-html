@@ -10,3 +10,6 @@ I've added two different variations of this:
 ---
 
 ### Find me on Discord if you need any help: @b3ck
+
+---
+The great folks at [IRLHosting](https://irlhosting.com/) have provided a generator for this, check it out here: [OBS Bitrate Overlay Generator](https://irlhosting.com/bitrate/)
